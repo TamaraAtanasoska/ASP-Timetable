@@ -26,15 +26,30 @@ fm_am_comb_check:-2{module(fm1, ling, 6, 0, 0, 0);module(fm2, ml, 6, 0, 0, 0);mo
 
 %one fm   
 fm_am_comb_check:-1{module(fm1, ling, 6, 0, 0, 0);module(fm2, ml, 6, 0, 0, 0);module(fm3, ci, 6, 0, 0, 0)}1,3{module(am11,ling,6,2,0,0);module(am21,ml,6,2,0,0);module(am31,ci,6,2,0,0);module(am12,ling,6,2,0,0);module(am22,ml,6,2,0,0);module(am32,ci,6,2,0,0)}.
- 
 
+%no fm
 fm_am_comb_check:-not module(fm1, ling, 6, 0, 0, 0),not module(fm2, ml, 6, 0, 0, 0),not module(fm3, ci, 6, 0, 0, 0),4{module(am11,ling,6,2,0,0);module(am21,ml,6,2,0,0);module(am31,ci,6,2,0,0);module(am12,ling,6,2,0,0);module(am22,ml,6,2,0,0);module(am32,ci,6,2,0,0)}.
 
+need_zero:-0{needfm(fm1, ling, 6, 0, 0, 0);needfm(fm2, ml, 6, 0, 0, 0);needfm(fm3, ci, 6, 0, 0, 0)}0.    
+need_one:-1{needfm(fm1, ling, 6, 0, 0, 0);needfm(fm2, ml, 6, 0, 0, 0); needfm(fm3, ci, 6, 0, 0, 0)}1.    
+need_two:-2{needfm(fm1, ling, 6, 0, 0, 0);needfm(fm2, ml, 6, 0, 0, 0); needfm(fm3, ci, 6, 0, 0, 0)}2.    
+need_three:-3{needfm(fm1, ling, 6, 0, 0, 0);needfm(fm2, ml, 6, 0, 0, 0); needfm(fm3, ci, 6, 0, 0, 0)}3.    
+    
 
+fm_zero:-not module(fm1, ling, 6, 0, 0, 0), not module(fm2, ml, 6, 0, 0, 0), not module(fm3, ci, 6, 0, 0, 0).    
+fm_one:-1{module(fm1, ling, 6, 0, 0, 0);module(fm2, ml, 6, 0, 0, 0); module(fm3, ci, 6, 0, 0, 0)}1.    
+fm_two:-2{module(fm1, ling, 6, 0, 0, 0);module(fm2, ml, 6, 0, 0, 0); module(fm3, ci, 6, 0, 0, 0)}2.    
+fm_three:-3{module(fm1, ling, 6, 0, 0, 0);module(fm2, ml, 6, 0, 0, 0); module(fm3, ci, 6, 0, 0, 0)}3.    
+    
+    
 am_one:-1{module(am11,ling,6,2,0,0);module(am21,ml,6,2,0,0);module(am31,ci,6,2,0,0);module(am12,ling,6,2,0,0);module(am22,ml,6,2,0,0);module(am32,ci,6,2,0,0)}1.
+
 am_two:-2{module(am11,ling,6,2,0,0);module(am21,ml,6,2,0,0);module(am31,ci,6,2,0,0);module(am12,ling,6,2,0,0);module(am22,ml,6,2,0,0);module(am32,ci,6,2,0,0)}2.
+
 am_three:-3{module(am11,ling,6,2,0,0);module(am21,ml,6,2,0,0);module(am31,ci,6,2,0,0);module(am12,ling,6,2,0,0);module(am22,ml,6,2,0,0);module(am32,ci,6,2,0,0)}3.
+
 am_four:-4{module(am11,ling,6,2,0,0);module(am21,ml,6,2,0,0);module(am31,ci,6,2,0,0);module(am12,ling,6,2,0,0);module(am22,ml,6,2,0,0);module(am32,ci,6,2,0,0)}4.
+
 am_to_many:-5{module(am11,ling,6,2,0,0);module(am21,ml,6,2,0,0);module(am31,ci,6,2,0,0);module(am12,ling,6,2,0,0);module(am22,ml,6,2,0,0);module(am32,ci,6,2,0,0)}.
 
 
